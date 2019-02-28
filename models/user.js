@@ -8,7 +8,7 @@ var userSchema = new Schema({
     },
     avatar: {
         type: String,
-        default: "https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"
+        // default: "https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"
     },
     name: {
         type: String,

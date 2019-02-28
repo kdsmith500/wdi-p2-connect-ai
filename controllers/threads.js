@@ -68,6 +68,9 @@ function edit(req, res) {
 }
 
 function update(req, res) {
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
     Thread.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, thread) {
         if (err) return res.redirect('threads/edit');
         res.redirect(`/threads/${thread._id}`);
