@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<% threads.forEach(function(t) { %>
+
+    <div class="ui items users-items">
+        <div class="item">
+            <a href="<%= t.image %>" class="ui big image thread-image">
+                <img src=<%= t.image %>>
+            </a>
+            <div class="content">
+                <a class="header" href="/threads/<%= t._id %>"><%= t.subject %></a>
+                <div class="meta threads-message">
+                    <span>Message</span>
+                </div>
+                <div class="description">
+                    <span><%= t.message %></span>
+                </div>
+                <div class="extra">
+                    <!-- have an ai api put something here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <% }); %>
+
+<%- include('../partials/footer') %>

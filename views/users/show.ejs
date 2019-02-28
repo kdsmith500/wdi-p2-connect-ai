@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<div class="ui centered card">
+    <div class="image">
+        <img class="user-avatar" src="<%= user.avatar %>" height=290px width=290px>
+    </div>
+    <div class="content">
+        <a class="header"><%= user.name %></a>
+    </div>
+</div>
+
+ <!-- user.threads.forEach(function(ut) {  -->
+
+<div class="ui items">
+    <div class="item">
+        <div class="image">
+            <img src="#">
+        </div>
+        <div class="content">
+            <a class="header"></a>
+            <div class="meta">
+                <span></span>
+            </div>
+            <div class="description">
+                <!-- thread subject goes here -->
+            </div>
+            <div class="extra">
+                <!-- total thread, last logged in, something -->
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- });  -->
+
+<%- include('../partials/footer') %>

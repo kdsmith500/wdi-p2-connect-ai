@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+      <div class="center-please">
+        <div class="notaworkingtitle">
+          Please to be Internets</br></br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          with You</br></br>
+        </div>
+
+        <% if (user) { %>
+
+        <div class="google-plus-login">
+          <button class="ui google plus button">
+            <a class="login-button" href="/logout">
+              <i class="google plus square icon"></i>
+              Log Out
+            </a>
+          </button>
+        </div>
+
+        <% } else { %>
+        
+        <div class="google-plus-login">
+          <button class="ui google plus button" href="/auth/google">
+            <a class="login-button" href="/auth/google">
+              <i class="google plus square icon"></i>
+              Login
+            </a>
+          </button>
+        </div>
+          
+        <% } %>
+      </div>
+    </main>
+</body>
+
+</html>

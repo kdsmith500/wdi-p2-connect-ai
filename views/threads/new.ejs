@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<div class="new-thread">
+    <h1 class="ui center aligned icon header">
+        <i class="newspaper outline icon"></i>
+        Create New Thread:
+    </h1>
+    <div class="ui form">
+        <form action="/threads" method="POST">
+        <div class="field">
+            <label>Subject</label>
+            <textarea name="subject" rows="2"></textarea>
+        </div>
+
+        <div class="field">
+            <label>Image URL</label>
+            <input name="image" type="text">
+        </div>
+
+        <div class="field">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+        </div>
+
+        <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

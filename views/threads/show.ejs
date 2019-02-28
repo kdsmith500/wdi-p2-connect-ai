@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<div class="ui items">
+    <div class="item">
+        <a href="<%= thread.image %>" class="ui huge image thread-image">
+            <img src="<%= thread.image %>">
+        </a>
+        <div class="content">
+            <a class="header">User</a>
+            <div class="meta">
+                <span><%= thread.subject %></span>
+            </div>
+            <div class="description">
+                <p><%= thread.message %></p>
+            </div>
+            <div class="extra">
+                <!-- last reply -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
