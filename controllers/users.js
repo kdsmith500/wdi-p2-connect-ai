@@ -8,7 +8,6 @@ module.exports = {
 
 function index(req, res) {
     User.find({}).populate('thread').exec(function(err, users) {
-        console.log(users);
         res.render('users', {
             users,
             title: 'Users'
