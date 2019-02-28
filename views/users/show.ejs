@@ -9,7 +9,7 @@
     </div>
 </div>
 
- <!-- user.threads.forEach(function(ut) {  -->
+ <% user.thread.forEach(function(ut) { %>
 
 <div class="ui items">
     <div class="item">
@@ -22,7 +22,7 @@
                 <span></span>
             </div>
             <div class="description">
-                <!-- thread subject goes here -->
+                <%= ut %>
             </div>
             <div class="extra">
                 <!-- total thread, last logged in, something -->
@@ -31,6 +31,6 @@
     </div>
 </div>
 
- <!-- });  -->
+ <% }); %>
 
 <%- include('../partials/footer') %>

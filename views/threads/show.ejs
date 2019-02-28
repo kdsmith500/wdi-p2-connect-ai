@@ -14,7 +14,92 @@
                 <p><%= thread.message %></p>
             </div>
             <div class="extra">
-                <!-- last reply -->
+                <div class="positive small ui animated left floated button" tabindex="0">
+                    <div class="visible content">
+                        Edit
+                    </div>
+                    <div class="hidden content">
+                        <a class="edit-button" href="/threads/<%= thread._id %>/edit">Thread</a>
+                    </div>
+                </div>
+                <form method="POST" action="/threads/<%= thread._id %>?_method=DELETE">
+                    <div class="negative small ui animated fade right floated button" tabindex="0">
+                        <div class="visible content">
+                            Delete
+                        </div>
+                        <div class="hidden content">
+                            <button class="delete-button" type="submit">You Sure?</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</br></br></br>
+
+<div class="new-reply">
+    <h1 class="ui center aligned icon header">
+        <i class="edit outline icon"></i>
+        Add Reply:
+    </h1>
+    <div class="ui form">
+        <form action="#" method="POST">
+        <div class="field">
+            <label>Subject</label>
+            <textarea name="subject" rows="2"></textarea>
+        </div>
+
+        <div class="field">
+            <label>Image URL</label>
+            <input name="image" type="text">
+        </div>
+
+        <div class="field">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+        </div>
+
+        <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</br>
+
+<div class="ui items users-items">
+    <div class="item">
+        <a href="#" class="ui big image thread-image">
+            <img src="#">
+        </a>
+        <div class="content">
+            <a class="header" href="#"></a>
+            <div class="meta threads-message">
+                <span>Message</span>
+            </div>
+            <div class="description">
+                <span></span>
+            </div>
+            <div class="extra">
+                <div class="positive small ui animated left floated button" tabindex="0">
+                    <div class="visible content">
+                        Edit
+                    </div>
+                    <div class="hidden content">
+                        <a class="edit-button" href="/threads/<%= thread._id %>/edit">Thread</a>
+                    </div>
+                </div>
+                <form method="POST" action="/threads/<%= thread._id %>?_method=DELETE">
+                    <div class="negative small ui animated fade right floated button" tabindex="0">
+                        <div class="visible content">
+                            Delete
+                        </div>
+                        <div class="hidden content">
+                            <button class="delete-button" type="submit">You Sure?</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

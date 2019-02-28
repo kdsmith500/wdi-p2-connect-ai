@@ -7,6 +7,7 @@ module.exports = {
     new: newThread,
     create,
     remove,
+    edit,
     update
 };
 
@@ -20,6 +21,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
+
     Thread.findById(req.params.id, function(err, thread) {
         res.render('threads/show', {
             thread,
@@ -39,26 +41,35 @@ function create(req, res) {
         if (req.body[key] === '') delete req.body[key];
     }
     Thread.create(req.body, function(err, thread) {
-        thread.user = req.user._id
         if (err) return res.redirect('threads/new');
         User.findOneAndUpdate(
-            {googleId: req.user.googleId},
+            {googleId: thread._id},
             {$push: { thread: thread }},
             function(err, user) {
                 res.redirect(`threads/${thread._id}`); 
-        });
+            }
+        );
     });
 };
 
 function remove(req, res) {
-    Thread.findByIdAndRemove(req.params.id, function(err, thread) {
-        res.redirect('threads');
+    Thread.findOneAndRemove({'_id':req.params.id}, function(err, thread) {
+        res.redirect('/threads');
+    });
+}
+
+function edit(req, res) {
+    Thread.findById(req.params.id, function(err, thread) {
+        res.render(`threads/edit`, {
+            thread,
+            title: 'Edit Thread'
+        });
     });
 }
 
 function update(req, res) {
     Thread.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, thread) {
-        if (err) return res.redirect(`${thread._id}`);
-        res.redirect(`${thread._id}`);
+        if (err) return res.redirect('threads/edit');
+        res.redirect(`/threads/${thread._id}`);
     });
 }

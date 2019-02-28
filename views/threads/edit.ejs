@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<div class="edit">
+    <h1 class="ui center aligned icon header">
+        <i class="newspaper outline icon"></i>
+        Make Changes:
+    </h1>
+    <div class="ui form">
+        <form method="POST" action="/threads/<%= thread._id %>?_method=PUT">
+        <div class="field">
+            <label>Subject</label>
+            <textarea name="subject" rows="2"></textarea>
+        </div>
+
+        <div class="field">
+            <label>Image URL</label>
+            <input name="image" type="text">
+        </div>
+
+        <div class="field">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+        </div>
+
+        <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

@@ -18,41 +18,41 @@
   /* background-image: url("https://cdn.bulbagarden.net/upload/f/f5/399Bidoof.png"); */
   /* background-image: url("https://www.writeups.org/wp-content/uploads/Tim-Enchanter-Monty-Python-Holy-Grail.jpg"); */
   /* background-image: url("https://cdna.artstation.com/p/assets/images/images/004/379/036/large/richard-andres-kaneda1.jpg?1483153827"); */
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png");
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"); */
   /* background-image: url("https://upload.wikimedia.org/wikipedia/en/d/d0/JaketheDog.png"); */
   /* background-image: url(""); */
-  background-size: cover;
+  /* background-size: cover; */
   border: solid .25rem black;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   height: 175px;
   width: 175px;
 }
 
-.user-avatar {
+/* .user-avatar { */
   /* background-image: url("http://mikesrpgcenter.com/bgate/npcs/edwin.gif"); */
   /* background-image: url("http://mikesrpgcenter.com/bgate2/npcs/minsc.gif"); */
   /* background-image: url("https://cdn.bulbagarden.net/upload/f/f5/399Bidoof.png"); */
-  background-image: url("https://www.writeups.org/wp-content/uploads/Tim-Enchanter-Monty-Python-Holy-Grail.jpg");
-  /* background-image: url("https://cdna.artstation.com/p/assets/images/images/004/379/036/large/richard-andres-kaneda1.jpg?1483153827"); */
-  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"); */
-  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/d/d0/JaketheDog.png"); */
-  /* background-image: url(""); */
-  background-size: cover;
-}
-
-.thread-image {
-  /* background-image: url("http://mikesrpgcenter.com/bgate/npcs/edwin.gif"); */
-  /* background-image: url("http://mikesrpgcenter.com/bgate2/npcs/minsc.gif"); */
-  background-image: url("https://cdn.bulbagarden.net/upload/f/f5/399Bidoof.png");
   /* background-image: url("https://www.writeups.org/wp-content/uploads/Tim-Enchanter-Monty-Python-Holy-Grail.jpg"); */
   /* background-image: url("https://cdna.artstation.com/p/assets/images/images/004/379/036/large/richard-andres-kaneda1.jpg?1483153827"); */
   /* background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"); */
   /* background-image: url("https://upload.wikimedia.org/wikipedia/en/d/d0/JaketheDog.png"); */
   /* background-image: url(""); */
-  background-size: cover;
+  /* background-size: cover; */
+/* } */
+
+.thread-image {
+  /* background-image: url("http://mikesrpgcenter.com/bgate/npcs/edwin.gif"); */
+  /* background-image: url("http://mikesrpgcenter.com/bgate2/npcs/minsc.gif"); */
+  /* background-image: url("https://cdn.bulbagarden.net/upload/f/f5/399Bidoof.png"); */
+  /* background-image: url("https://www.writeups.org/wp-content/uploads/Tim-Enchanter-Monty-Python-Holy-Grail.jpg"); */
+  /* background-image: url("https://cdna.artstation.com/p/assets/images/images/004/379/036/large/richard-andres-kaneda1.jpg?1483153827"); */
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/e/e5/FinnAdventureTime.png"); */
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/d/d0/JaketheDog.png"); */
+  /* background-image: url(""); */
+  /* background-size: cover; */
   border: solid .25rem black;
-  height: 500px;
-  width: 500px;
+  /* height: 500px; */
+  /* width: 500px; */
   margin-right: 1rem;
 }
 
@@ -86,11 +86,20 @@
   margin: 1rem auto;
 }
 
-.new-thread {
+.new-thread, .new-reply, .edit {
   width: 60%;
   margin: 0 auto;
 }
 
-.new-thread-header {
-  margin: 0 auto;
+.edit-button {
+  all: unset;
+}
+
+.edit-button:hover {
+  all: unset;
+}
+
+.delete-button {
+  all: unset;
+  background-color: #D13D28;
 }

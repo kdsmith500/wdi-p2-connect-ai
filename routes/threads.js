@@ -4,6 +4,7 @@ var threadsCtrl = require('../controllers/threads');
 
 router.get('/threads', threadsCtrl.index);
 router.get('/threads/new', threadsCtrl.new);
+router.get('/threads/:id/edit', threadsCtrl.edit);
 router.get('/threads/:id', threadsCtrl.show);
 router.post('/threads', threadsCtrl.create);
 router.delete('/threads/:id', threadsCtrl.remove);

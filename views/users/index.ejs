@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <% users.forEach(function(u) { %>
+<% u.thread.forEach(function(t) { %>
 
 <div class="ui items users-items">
     <div class="item">
@@ -13,7 +14,11 @@
                 <span>Threads</span>
             </div>
             <div class="description">
-                <span><%= u.thread %></span>
+                <span>
+                    <i class="yellow quote left icon"></i>
+                    <%= u.thread %>
+                    <i class="orange quote right icon"></i>
+                </span>
             </div>
             <div class="extra">
                 <!-- have an ai api put something here -->
@@ -22,6 +27,7 @@
     </div>
 </div>
 
+<% }); %>
 <% }); %>
 
 <%- include('../partials/footer') %>
