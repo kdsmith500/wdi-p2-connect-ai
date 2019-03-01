@@ -7,12 +7,12 @@ module.exports = {
 };
 
 function index(req, res) {
-    User.find({}).populate('thread').exec(function(err, users) {
+    User.find({}, function(err, users) {
         res.render('users', {
             users,
             title: 'Users'
-            });
         });
+    });
 }
 
 function show(req, res) {
