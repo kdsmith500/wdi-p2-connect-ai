@@ -25,14 +25,14 @@ function show(req, res) {
         res.render('threads/show', {
             thread,
             title: 'Thread'
-        })
+        });
     });
 }
 
 function newThread(req, res) {
     res.render('threads/new', {
         title: 'Add Thread'
-      });
+    });
 }
 
 function create(req, res) {
