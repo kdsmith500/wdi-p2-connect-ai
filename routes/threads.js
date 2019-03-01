@@ -6,8 +6,13 @@ router.get('/threads', threadsCtrl.index);
 router.get('/threads/new', threadsCtrl.new);
 router.get('/threads/:id/edit', threadsCtrl.edit);
 router.get('/threads/:id', threadsCtrl.show);
-router.post('/threads', threadsCtrl.create);
-router.delete('/threads/:id', threadsCtrl.remove);
-router.put('/threads/:id', threadsCtrl.update);
+router.post('/threads', isLoggedIn, threadsCtrl.create);
+router.delete('/threads/:id', isLoggedIn, threadsCtrl.remove);
+router.put('/threads/:id', isLoggedIn, threadsCtrl.update);
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect('/auth/google');
+} 
 
 module.exports = router;
